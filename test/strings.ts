@@ -14,5 +14,10 @@ describe("Strings", function () {
     const bytes = await strings.getStringAsBytes();
 
     expect(hexToUtf8(bytes)).to.equal(testString);
+
+    await strings.setBytes(bytes);
+
+    const string = await strings.getBytesAsString();
+    expect(string).to.equal(testString);
   });
 });
