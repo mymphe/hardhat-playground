@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 import { hexToUtf8 } from "./utils";
 
-describe("Strings", function () {
+xdescribe("Strings", function () {
   it("Should return UTF-8 encoded bytes", async function () {
     const Strings = await ethers.getContractFactory("Strings");
     const strings = await Strings.deploy();

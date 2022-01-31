@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 import { hexToUtf8 } from "./utils";
 
-describe("Bytes", function () {
+xdescribe("Bytes", function () {
   it("Should store string as byte", async function () {
     const Bytes = await ethers.getContractFactory("Bytes");
     const bytes = await Bytes.deploy();
