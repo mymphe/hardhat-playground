@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 import { Globals } from "../typechain";
 
-describe("Globals", function () {
+xdescribe("Globals", function () {
   let globals: Globals;
 
   this.beforeEach(async () => {

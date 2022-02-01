@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "string",
         "bytes",
-        "globals"
+        "globals",
+        "verifier"
     ]
 }
