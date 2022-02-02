@@ -16,7 +16,7 @@ contract MessageVerifier {
         return sha256(pack(_message));
     }
 
-    function verify(uint8 _message, bytes memory _signature)
+    function verify(string memory _message, bytes memory _signature)
         public
         view
         returns (bool)
