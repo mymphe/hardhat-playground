@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import {
+  arrayify,
   solidityKeccak256,
   solidityPack,
   soliditySha256,
@@ -41,5 +42,18 @@ describe("MessageVerifier", function () {
     const _hash = await messageVerifier.sha(message);
 
     expect(hash).to.equal(_hash);
+  });
+
+  it("Should verify a signature", async () => {
+    const message = 0;
+    const [signer] = await ethers.getSigners();
+
+    const hash = arrayify(solidityKeccak256(["uint8"], [message]));
+    const signature = await signer.signMessage(hash);
+    console.log("test", hash, signature);
+
+    const verified = await messageVerifier.verify(message, signature);
+
+    expect(verified).to.equal(true);
   });
 });
