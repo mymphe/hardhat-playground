@@ -3,6 +3,7 @@
         "string",
         "bytes",
         "globals",
-        "verifier"
+        "verifier",
+        "packing"
     ]
 }
